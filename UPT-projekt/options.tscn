@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://4gpisubckc2q"]
+
+[ext_resource type="Script" path="res://Options.gd" id="1_s0oq7"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s0oq7")
+
+[node name="Volume" type="Button" parent="."]
+layout_mode = 0
+offset_left = 557.0
+offset_top = 253.0
+offset_right = 624.0
+offset_bottom = 284.0
+text = "Volume"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 565.0
+offset_top = 290.0
+offset_right = 610.0
+offset_bottom = 321.0
+text = "Back"
+
+[connection signal="pressed" from="Volume" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
